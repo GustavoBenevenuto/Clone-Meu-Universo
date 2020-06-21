@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { View, Text, StyleSheet, ScrollView, Image, TouchableOpacity, StatusBar } from 'react-native';
+import React from 'react';
+import { View, Text, StyleSheet, ScrollView, Image, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import CardBall from '../../components/CardBall';
 
@@ -28,22 +28,22 @@ export default function Academic() {
                     <View style={s.contentCard}>
 
                         <CardBall sourceImage={require('../../assets/academico/calendar.png')}
-                            title="Calendário Acadêmico"/>
+                            title="Calendário Acadêmico" onPress={() => {}}/>
 
                         <CardBall sourceImage={require('../../assets/academico/photo.png')}
-                            title="Atividade Complementar" />
+                            title="Atividade Complementar"  onPress={() => {}}/>
 
                         <CardBall sourceImage={require('../../assets/academico/test.png')}
-                            title="Datas de Provas" />
+                            title="Datas de Provas"  onPress={() => {}}/>
 
                         <CardBall sourceImage={require('../../assets/academico/pin.png')}
-                            title="Encontrar Gestor" />
+                            title="Encontrar Gestor"  onPress={() => {}}/>
 
                         <CardBall sourceImage={require('../../assets/academico/compass.png')}
-                            title="Encontrar Professor" />
+                            title="Encontrar Professor"  onPress={() => {}}/>
 
                         <CardBall sourceImage={require('../../assets/academico/clock.png')}
-                            title="Horários" />
+                            title="Horários" onPress={() => {}}/>
 
                         <CardBall sourceImage={require('../../assets/academico/grade.png')}
                             title="Notas e Faltas"  onPress={() => navigation.navigate('Grade')}/>

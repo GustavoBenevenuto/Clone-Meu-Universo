@@ -1,18 +1,18 @@
 import React from 'react';
-import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, Image, TouchableOpacity, TouchableHighlight } from 'react-native';
 
 // Use path para caminhos relativos
 export default function Card({ sourceImage, title, description, onPress } = props) {
     return (
-        <TouchableOpacity activeOpacity={0.6} onPress={onPress}>
-            <View style={s.card}>
+        <TouchableHighlight style={s.card} underlayColor="#BBB"  onPress={onPress}>
+            < >
                 <Image style={s.imageCard} source={sourceImage} />
                 <View style={s.areaTextCard}>
                     <Text style={s.titleCard}>{title}</Text>
                     <Text style={s.descriptionCard}>{description}</Text>
                 </View>
-            </View>
-        </TouchableOpacity>
+            </>
+        </TouchableHighlight>
     );
 }
 

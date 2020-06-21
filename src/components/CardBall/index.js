@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, Image, TouchableHighlight } from 'react-native';
 
 export default function CardBall({ sourceImage, title, backgroundColor, onPress } = props) {
 
@@ -34,14 +34,12 @@ export default function CardBall({ sourceImage, title, backgroundColor, onPress 
     });
 
     return (
-        <TouchableOpacity style={s.buttonCard} activeOpacity={0.7} onPress={onPress}>
-            <>
-                <View style={s.cardBall}>
-                    <Image style={s.imageCard} source={sourceImage} />
-                </View>
-                <Text style={s.titleCard}>{title}</Text>
-            </>
-        </TouchableOpacity>
+        <View style={s.buttonCard}>
+            <TouchableHighlight style={s.cardBall} underlayColor="#BBB" activeOpacity={0.7} onPress={onPress}>
+                <Image style={s.imageCard} source={sourceImage} />
+            </TouchableHighlight>
+            <Text style={s.titleCard}>{title}</Text>
+        </View>
     )
 }
 

@@ -44,19 +44,19 @@ export default function Menu() {
                         description="Caléndario, atividades..." onPress={() => navigation.navigate('Academic')} />
 
                     <Card sourceImage={require("../../assets/book.png")} title="Biblioteca"
-                        description="Empréstimos, reservas..." />
+                        description="Empréstimos, reservas..." onPress={() => {}}/>
 
                     <Card sourceImage={require("../../assets/user.png")} title="Carteirinha Estudante"
-                        description="Matrícula, situação..." />
+                        description="Matrícula, situação..." onPress={() => {}} />
 
                     <Card sourceImage={require("../../assets/bank.png")} title="Financeiro"
-                        description="Cotas, Débitos..." />
+                        description="Cotas, Débitos..." onPress={() => {}} />
 
                     <Card sourceImage={require("../../assets/chat.png")} title="Fale Aluno"
-                        description="Fale conosco..." />
+                        description="Fale conosco..." onPress={() => {}} />
 
                     <Card sourceImage={require("../../assets/prescription.png")} title="Protocolo"
-                        description="Abertura, situação..." />
+                        description="Abertura, situação..." onPress={() => {}} />
                 </ScrollView>
             </View>
         </>

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { View, Text, StyleSheet, ScrollView, Image, TouchableOpacity, StatusBar } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-
+import CardGrade from '../../components/CardGrade';
 
 export default function Grade() {
 
@@ -25,55 +25,31 @@ export default function Grade() {
             <View style={s.content}>
                 <ScrollView>
                     <View style={s.contentCard}>
-                        <View style={s.cardGrade}>
-                            <Text style={s.titleCard}>N008-N1 - HOMEM CULTURA E SOCIEDADE</Text>
-                            <View style={s.areaCardTop}>
-                                <View style={s.areaCardTopLeft}>
-                                    <View style={s.areaTitleBall}>
-                                        <Text style={s.title}>V1</Text>
-                                        <Text style={s.title}>V2</Text>
-                                        <Text style={s.title}>VT</Text>
-                                        <Text style={s.title}>VS</Text>
-                                    </View>
-                                    <View style={s.areaBall}>
-                                        <View style={s.ball}>
-                                            <Text style={s.description}>10.00</Text>
-                                        </View>
+                        <CardGrade discipline="N008-N1 - HOMEM CULTURA E SOCIEDADE"
+                            grades={{ v1: 10, v2: 10, vt: 10, vs: 0 }} lack={0}
+                            partialAverage={5} finalAverage={10}
+                            situation="Aprovado" />
 
-                                        <View style={s.ball}>
-                                            <Text style={s.description}>10.00</Text>
-                                        </View>
+                        <CardGrade discipline="N008-N1 - ENGENHARIA DE SOFTWARE"
+                            grades={{ v1: 10, v2: 10, vt: 10, vs: 0 }} lack={0}
+                            partialAverage={5} finalAverage={10}
+                            situation="Aprovado" />
 
-                                        <View style={s.ball}>
-                                            <Text style={s.description}>10.00</Text>
-                                        </View>
+                        <CardGrade discipline="N008-N1 - BANCO DE DADOS"
+                            grades={{ v1: 5, v2: 5, vt: 5, vs: 5 }} lack={6}
+                            partialAverage={5} finalAverage={5}
+                            situation="Reprovado" />
 
-                                        <View style={s.ball}>
-                                            <Text style={s.description}>10.00</Text>
-                                        </View>
-                                    </View>
-                                </View>
-                                <View style={s.areaCardTopRight}>
-                                    <Text style={s.title}>FALTAS</Text>
-                                    <View style={s.ball}>
-                                        <Text style={s.description}>0</Text>
-                                    </View>
-                                </View>
-                            </View>
-                            <View style={s.areaCardBottom}>
-                                <View>
-                                    <Text style={s.title}>Média Parcial</Text>
-                                    <Text style={s.title}>Média Final</Text>
-                                    <Text style={s.title}>Situação</Text>
-                                </View>
+                        <CardGrade discipline="N008-N1 - ESTRUTURA DE DADOS"
+                            grades={{ v1: 10, v2: 10, vt: 10, vs: 0 }} lack={0}
+                            partialAverage={5} finalAverage={10}
+                            situation="Aprovado" />
 
-                                <View>
-                                    <Text style={s.titleSituation}>5.00</Text>
-                                    <Text style={s.titleSituation}>10.00</Text>
-                                    <Text style={s.titleSituation, {color: 'green'}}>Aprovado</Text>
-                                </View>
-                            </View>
-                        </View>
+                        <CardGrade discipline="N008-N1 - ALGORITMOS E LÓGICA"
+                            grades={{ v1: 10, v2: 10, vt: 10, vs: 0 }} lack={0}
+                            partialAverage={5} finalAverage={10}
+                            situation="Aprovado" />
+
                     </View>
                 </ScrollView>
             </View>
@@ -117,98 +93,11 @@ const s = StyleSheet.create({
     // ------------- Header -------------
 
     // ------------- Content -------------
-
-
     contentCard: {
         paddingTop: 20,
         justifyContent: 'center',
-        alignItems: 'center'
-    },
-
-    // ball
-
-    cardGrade: {
-        backgroundColor: '#E8E8E8',
-        borderRadius: 15,
-        width: 350,
-        height: 170,
-        marginTop: 20,
-        paddingTop: 10,
-        paddingLeft: 15,
-        paddingRight: 15,
-
-    },
-
-    titleCard: {
-        fontSize: 15,
-        color: '#102D69',
-    },
-
-    areaCardTop: {
-        flex: 1,
-        flexDirection: 'row',
-        marginTop: 5,
-        paddingBottom: 5,
-        borderBottomWidth: 1,
-    },
-
-    areaCardTopLeft: {
-        flex: 3,
-        justifyContent: 'space-around',
-    },
-
-    areaCardTopRight: {
-        flex: 1,
-        justifyContent: 'center',
         alignItems: 'center',
+        paddingBottom: 20,
     },
-
-    areaCardBottom: {
-        flex: 1,
-        marginBottom: 5,
-        paddingLeft: 10,
-        paddingRight: 10,
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-    },
-
-    areaTitleBall: {
-        flex: 1,
-        flexDirection: 'row',
-        justifyContent: 'space-around',
-    },
-
-    areaBall: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'space-around',
-    },
-
-    ball: {
-        backgroundColor: '#FFF',
-        width: 40,
-        height: 40,
-        borderRadius: 20,
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-
-    title: {
-        fontSize: 12,
-        color: "#102D69",
-    },
-
-    description: {
-        fontSize: 13,
-        color: "#102D69",
-    },
-
-    titleSituation:{
-        fontSize: 13,
-        color: "#102D69",
-        textAlign: 'right',
-    }
-
     // ------------- Content -------------
 });

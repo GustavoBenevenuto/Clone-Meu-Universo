@@ -30,38 +30,48 @@ export default function Grade() {
                             <View style={s.areaCardTop}>
                                 <View style={s.areaCardTopLeft}>
                                     <View style={s.areaTitleBall}>
-                                        <Text style={s.titleBall}>V1</Text>
-                                        <Text style={s.titleBall}>V2</Text>
-                                        <Text style={s.titleBall}>VT</Text>
-                                        <Text style={s.titleBall}>VS</Text>
+                                        <Text style={s.title}>V1</Text>
+                                        <Text style={s.title}>V2</Text>
+                                        <Text style={s.title}>VT</Text>
+                                        <Text style={s.title}>VS</Text>
                                     </View>
                                     <View style={s.areaBall}>
                                         <View style={s.ball}>
-                                            <Text style={s.descriptionBall}>10.00</Text>
+                                            <Text style={s.description}>10.00</Text>
                                         </View>
 
                                         <View style={s.ball}>
-                                            <Text style={s.descriptionBall}>10.00</Text>
+                                            <Text style={s.description}>10.00</Text>
                                         </View>
 
                                         <View style={s.ball}>
-                                            <Text style={s.descriptionBall}>10.00</Text>
+                                            <Text style={s.description}>10.00</Text>
                                         </View>
 
                                         <View style={s.ball}>
-                                            <Text style={s.descriptionBall}>10.00</Text>
+                                            <Text style={s.description}>10.00</Text>
                                         </View>
                                     </View>
                                 </View>
                                 <View style={s.areaCardTopRight}>
-                                    <Text style={s.titleBall}>FALTAS</Text>
+                                    <Text style={s.title}>FALTAS</Text>
                                     <View style={s.ball}>
-                                        <Text style={s.descriptionBall}>0</Text>
+                                        <Text style={s.description}>0</Text>
                                     </View>
                                 </View>
                             </View>
                             <View style={s.areaCardBottom}>
+                                <View>
+                                    <Text style={s.title}>Média Parcial</Text>
+                                    <Text style={s.title}>Média Final</Text>
+                                    <Text style={s.title}>Situação</Text>
+                                </View>
 
+                                <View>
+                                    <Text style={s.titleSituation}>5.00</Text>
+                                    <Text style={s.titleSituation}>10.00</Text>
+                                    <Text style={s.titleSituation, {color: 'green'}}>Aprovado</Text>
+                                </View>
                             </View>
                         </View>
                     </View>
@@ -155,8 +165,12 @@ const s = StyleSheet.create({
 
     areaCardBottom: {
         flex: 1,
-        backgroundColor: 'green',
         marginBottom: 5,
+        paddingLeft: 10,
+        paddingRight: 10,
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
     },
 
     areaTitleBall: {
@@ -180,15 +194,21 @@ const s = StyleSheet.create({
         justifyContent: 'center',
     },
 
-    titleBall:{
+    title: {
         fontSize: 12,
         color: "#102D69",
     },
 
-    descriptionBall:{
+    description: {
         fontSize: 13,
         color: "#102D69",
     },
+
+    titleSituation:{
+        fontSize: 13,
+        color: "#102D69",
+        textAlign: 'right',
+    }
 
     // ------------- Content -------------
 });

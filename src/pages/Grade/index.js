@@ -29,30 +29,34 @@ export default function Grade() {
                             <Text style={s.titleCard}>N008-N1 - HOMEM CULTURA E SOCIEDADE</Text>
                             <View style={s.areaCardTop}>
                                 <View style={s.areaCardTopLeft}>
-                                    <View style={s.ball}>
-                                        <Text style={s.titleExam}>V1</Text>
-                                        <Text>10.00</Text>
+                                    <View style={s.areaTitleBall}>
+                                        <Text style={s.titleBall}>V1</Text>
+                                        <Text style={s.titleBall}>V2</Text>
+                                        <Text style={s.titleBall}>VT</Text>
+                                        <Text style={s.titleBall}>VS</Text>
                                     </View>
+                                    <View style={s.areaBall}>
+                                        <View style={s.ball}>
+                                            <Text style={s.descriptionBall}>10.00</Text>
+                                        </View>
 
-                                    <View style={s.ball}>
-                                        <Text style={s.titleExam}>V1</Text>
-                                        <Text>10.00</Text>
-                                    </View>
+                                        <View style={s.ball}>
+                                            <Text style={s.descriptionBall}>10.00</Text>
+                                        </View>
 
-                                    <View style={s.ball}>
-                                        <Text style={s.titleExam}>VS</Text>
-                                        <Text>10.00</Text>
-                                    </View>
+                                        <View style={s.ball}>
+                                            <Text style={s.descriptionBall}>10.00</Text>
+                                        </View>
 
-                                    <View style={s.ball}>
-                                        <Text style={s.titleExam}>VS</Text>
-                                        <Text>10.00</Text>
+                                        <View style={s.ball}>
+                                            <Text style={s.descriptionBall}>10.00</Text>
+                                        </View>
                                     </View>
                                 </View>
                                 <View style={s.areaCardTopRight}>
+                                    <Text style={s.titleBall}>FALTAS</Text>
                                     <View style={s.ball}>
-                                        <Text style={s.titleExam}>FALTA</Text>
-                                        <Text>10.00</Text>
+                                        <Text style={s.descriptionBall}>0</Text>
                                     </View>
                                 </View>
                             </View>
@@ -111,14 +115,18 @@ const s = StyleSheet.create({
         alignItems: 'center'
     },
 
+    // ball
+
     cardGrade: {
         backgroundColor: '#E8E8E8',
         borderRadius: 15,
         width: 350,
-        height: 190,
+        height: 170,
         marginTop: 20,
         paddingTop: 10,
         paddingLeft: 15,
+        paddingRight: 15,
+
     },
 
     titleCard: {
@@ -129,40 +137,57 @@ const s = StyleSheet.create({
     areaCardTop: {
         flex: 1,
         flexDirection: 'row',
+        marginTop: 5,
+        paddingBottom: 5,
+        borderBottomWidth: 1,
     },
 
     areaCardTopLeft: {
-        backgroundColor: 'green',
         flex: 3,
-        paddingTop: 5,
-        flexDirection: 'row',
-        flexWrap: 'wrap',
         justifyContent: 'space-around',
-        paddingTop: 15,
-    },
-
-    titleExam: {
     },
 
     areaCardTopRight: {
-        backgroundColor: 'red',
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
     },
 
     areaCardBottom: {
-        backgroundColor: 'blue',
         flex: 1,
+        backgroundColor: 'green',
+        marginBottom: 5,
+    },
+
+    areaTitleBall: {
+        flex: 1,
+        flexDirection: 'row',
+        justifyContent: 'space-around',
+    },
+
+    areaBall: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-around',
     },
 
     ball: {
-        backgroundColor: 'yellow',
-        width: 50,
-        height: 50,
-        borderRadius: 25,
-        justifyContent: 'center',
+        backgroundColor: '#FFF',
+        width: 40,
+        height: 40,
+        borderRadius: 20,
         alignItems: 'center',
+        justifyContent: 'center',
+    },
+
+    titleBall:{
+        fontSize: 12,
+        color: "#102D69",
+    },
+
+    descriptionBall:{
+        fontSize: 13,
+        color: "#102D69",
     },
 
     // ------------- Content -------------

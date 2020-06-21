@@ -19,3 +19,7 @@ Clone da aplicação mobile "Meu Universo", aplicativo esse que é disponibiliza
     - Javascript
 
 ## Telas Aplicação Clone
+![image](https://user-images.githubusercontent.com/40447101/85233258-5dbb7f00-b3db-11ea-80f1-b2d428116ff0.png)
+![image](https://user-images.githubusercontent.com/40447101/85233275-79bf2080-b3db-11ea-99b8-e67ec348373e.png)
+![image](https://user-images.githubusercontent.com/40447101/85233286-922f3b00-b3db-11ea-9316-2c605ca1fc79.png)
+![image](https://user-images.githubusercontent.com/40447101/85233303-a6733800-b3db-11ea-8047-c088d8c7b62c.png)
